@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Terminplaner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        .mailbox {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .mailbox li {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space between;
+            align-items: center;
+        }
+        
+        .mailbox .folder.inbox {
+            background-color: #c6f6e1;
+        }
+        
+        .mailbox .folder.sent {
+            background-color: #f6ecc6;
+        }
+        
+        .mailbox .folder.drafts {
+            background-color: #f6c6c6;
+        }
+        
+        .mailbox .folder.trash {
+            background-color: #d4d4d4;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .compose {
+            width: 48%;
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .read {
+            width: 48%;
+            padding: 10px;
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .delete {
+            width: 48%;
+            padding: 10px;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                max-width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Email-Postfach</h1>
+        <ul class="mailbox">
+            <li class="folder inbox">Posteingang</li>
+            <li class="folder sent">Gesendet</li>
+            <li class="folder drafts">Entwürfe</li>
+            <li class="folder trash">Papierkorb</li>
+        </ul>
+
+        <div class="actions">
+            <button class="compose">Verfassen</button>
+            <button class="read">Lesen</button>
+            <button class="delete">Löschen</button>
+        </div>
+
+        <div class="email-list">
+            <ul class="emails">
+                <!-- Beispiel-E-Mails hier einfügen -->
+            </ul>
+        </div>
+
+        <div class="email-view">
+            <h2>Email-Titel</h2>
+            <p>Email-Inhalt</p>
+        </div>
+    
+       
+        
+    </div>
+    
+    <script src="script.js"></script>
